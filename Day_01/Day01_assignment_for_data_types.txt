@@ -1,0 +1,32 @@
+List of assignment for data-types
+1. Write a Python program to remove the characters which have odd index values of a given string.
+sample input: "abcdef"
+sample output: "ace"
+2. Write a Python program which accepts a sequence of comma-separated numbers from user and
+ generate a list and a tuple with those numbers.
+sample input: 3, 5, 7, 23
+sample output:
+List : ['3', ' 5', ' 7', ' 23']
+Tuple : ('3', ' 5', ' 7', ' 23')
+3. Write a Python program to accept a filename from the user and print the extension of that.
+sample input: python.py
+sample output: py
+4. Write a python program to return number of vowels in a given string.
+sample input: 'Getting started with python'
+sample output: "Total vowels found in <sample_input>: 6"
+5. Write a Python program to remove duplicates from a list
+sample input: [1, 3, 1, 'python', 'java', 'python']
+sample output: [1, 3, 'python', 'java']
+6. Write a Python program to find the second largest number in a list.
+sample input: [-8, 1, 2, -2, 0]
+sample output: 1
+7. Write a Python program to replace last value of tuples in a list by 100.
+sample input: [(10, 20, 40), (40, 50, 60), (70, 80, 90)]
+sample output:[(10, 20, 100), (40, 50, 100), (70, 80, 100)]
+8. Write a Python program to add the 10 to all the values of a dictionary.
+sample input: dict_num = {1: 10, 2: 20, 3: 30, 4: 40, 5: 50}
+sample output: {1: 20, 2: 30, 3: 40, 4: 50, 5: 60}
+9. Write a Python program to count number of items in a dictionary value that is a list.
+sample input: d =  {'Alex': ['subj1', 'subj2', 'subj3'], 'David': ['subj1', 'subj2']}
+sample output: 5
+10. Write a program to create two sets and print their union, intersection, difference and symmetric difference.
