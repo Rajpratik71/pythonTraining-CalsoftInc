@@ -1,12 +1,10 @@
 Assignments for Day 1:
-1) Install Python  3.7 in your local machine. Create a virtualenv. Try the Python's interactive interpreter.
-2) Install Pycharm and configure the venv in it.
-3) Implemnent the below project in pycharm.
-    i) Create a Python lib which will have below functions:
-	   a)Function to generate Factorial of a number.
-	   b)Function to generate fibonacci series with count as number.
-	 ii) Import these functions in an executable Python script.
-	     a) Python script will take an input from the user of what function to perform.
-		 b) The second input will be the number.
-		 c) Based on the number and function to be performed call the appropriate function and display the output to the user.
+1) Write a Python script with below functionality:
+    	   a) It will have a function to generate Factorial of a number.
+	   b) It will have a function to generate fibonacci series with count as number.
+	   c) Python script will take an input from the user of what function to perform.
+	   d) The second input will be the number.
+           e) Based on the number and function to be performed call the appropriate function and display the output to the user.
+2) Given the broken script "sample_script", run it and debug it to solve all the exceptions.
+
 		 

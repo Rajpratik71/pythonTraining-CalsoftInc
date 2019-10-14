@@ -1,5 +1,24 @@
 # Flow Control example
 
+# if, elif else example
+x = "one"
+if x == "one":
+    print("one is selected")
+
+elif x == "two":
+    print("two is selected")
+
+else:
+    print("Something else is selected")
+
+
+# if -- else:
+if x == "one":
+    print("one is selected")
+else:
+    print("Something else is selected")
+
+
 
 for i in in range(2, 100, 2);
     # prints a list of even numbers uptil 98
