@@ -1,0 +1,2 @@
+1) Create a wheel of your package.
+2) Install the created wheel and use it as a library
