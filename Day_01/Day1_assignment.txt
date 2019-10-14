@@ -2,9 +2,10 @@ Assignments for Day 1:
 1) Write a Python script with below functionality:
     	   a) It will have a function to generate Factorial of a number.
 	   b) It will have a function to generate fibonacci series with count as number.
-	   c) Python script will take an input from the user of what function to perform.
+	   c) Python script will take an input from the user of what function to perform. (Hint: Check input() and raw_input())
 	   d) The second input will be the number.
            e) Based on the number and function to be performed call the appropriate function and display the output to the user.
 2) Given the broken script "sample_script", run it and debug it to solve all the exceptions.
+3) Write a python script to open a file with "with open", add some content , read it and print the same.
 
 		 
