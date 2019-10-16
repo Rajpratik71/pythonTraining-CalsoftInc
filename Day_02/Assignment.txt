@@ -1,2 +1,18 @@
-1) Create a wheel of your package.
-2) Install the created wheel and use it as a library
+1) Write a function which will takes a first parameter as *args, newlist as a second parameter. The default value to the newlist  will be "[]".
+   Append the args in the list inside the function and print the list.
+   call the function as :
+   func(1,2,3)
+   func(7,8,9, a=[])
+   func(8,9,10)
+   Explain the observation. 
+   PS. Don't copy paste from google, try to undestand what's happening in the background and explain in your own words
+
+2) Make a package with  controller and executor subpackage.
+   executor will have a module as the main script to be executed.
+   Use the library math and random and write some functions in cotroller package's module. 
+   executor package's module will import functions from controller. (Try to be creative with imports and use __init__.py , aliases to make imports more direct.)
+   The main script will call these functions when ran with user given inout via console.
+   
+   
+   
+   
