@@ -1,23 +1,49 @@
-class Employee:
+#!/usr/bin/env python
+"""
+Program on public, protected and private variables in python
+"""
 
-    def __init__(self, first, last, pay):
-        self.first = first
-        self.last = last
-        self.email = first + '.' + last + '@email.com'
-        self.__pay = pay
 
-    def fullname(self):
-        return f'Fullname: {self.first} {self.last}'
+# define parent class Company
+class Company:
+    # constructor
+    def __init__(self, name, proj):
+        self.name = name  # name(name of company) is public
+        self._proj = proj  # proj(current project) is protected
+        self.__client = "ABC"
 
-    def __salary_details(self):
-        return self.__pay
+    # public function to show the details
+    def show(self):
+        print("The code of the company is = ", self.ccode)
 
-emp_1 = Employee('Dnyaneshwar', 'Biradar', 10000)
-emp_2 = Employee('Calsoft', 'Employee', 20000)
-print(emp_1.fullname(), emp_2.fullname()) #public
 
-# print(emp_1.__pay) #Attribute error
-# print(emp_1.__salary_details) #Attribute error
+# define child class Emp
+class Emp(Company):
+    # constructor
+    def __init__(self, eName, sal, cName, proj):
+        # calling parent class constructor
+        super().__init__(cName, proj)
+        self.name = eName  # public member variable
+        self.__sal = sal  # private member variable
 
-print(emp_1._Employee__pay)
-print(emp_2._Employee__salary_details())
+    # public function to show salary details
+    def show_sal(self):
+        print("The salary of ", self.name, " is ", self.__sal)
+
+
+if __name__ == "__main__":
+    # creating instance of Company class
+    c = Company("Stark Industries", "Mark 4")
+    # creating instance of Employee class
+    e = Emp("Steve", 9999999, c.name, c._proj)
+
+    print(f"Welcome to {c.name}")
+    # Employee(sub class) can access public and protected vars of Base class
+    print(f"Here {e.name}, is working on {e._proj}")
+
+    # to show the value of __sal we have created a public function show_sal()
+    e.show_sal()
+
+    # we can acces private variale as object._Class__var
+    print(c._Company__client)
+    print(e._Emp__sal)
