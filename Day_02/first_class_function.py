@@ -7,8 +7,8 @@ print(return_upper('Hello'))
   
 new_func = return_upper 
   
-print(new_func('Hello'))
-
+print(new_func('hola'))
+#################################################
 
 def upper_func(func): 
     # storing the function in a variable 
