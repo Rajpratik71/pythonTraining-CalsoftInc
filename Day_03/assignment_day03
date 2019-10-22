@@ -1,0 +1,12 @@
+Assignment:
+1. Define a class named Circle which can be constructed by a radius. The Circle class has a method which can compute the area. 
+
+
+2. Python program using class method and static method:
+	a. Write a class method to create a Person object by birth year. 
+	b. Write a static method to check if a Person is adult or not
+
+3. Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. 
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+
+4. Wrie an abstract class AbstractOperation having constructor for two operands and implement classes for operations addition, substraction and multiplication which inherits from abstract class.
