@@ -1,0 +1,115 @@
+1)Write a program to subtract two numbers using magic method(__sub__).
+input1: 10
+input2: 5
+output: 5
+Explanation:
+The first input will be the argument of one of the class and the other input will be just a variable.
+So when we print(obj of the class - variable) should give me the output.
+Hint:
+For reference can see the code in sample_magic_methods1.py
+
+2)Write a Program to add two complex numbers(a+ij where 'a'is real number and 'i' is imaginary number) using magic method(__add__).
+Example:
+input1: 1+2j
+input2: 2+1j
+Output: 3+3j
+Note:
+a -->You will have to take 2 inputs from the user which will be in the same format as the above input1 and input2
+b -->the real part(a) and imaginary part(i) will be two attributes of a class and then add both the objects of class two get the expected output
+Hint:
+For reference can see the code in sample_magic_methods1.py
+
+
+3)Identify the missing piece of code in below program and write the correct answer to remove the error which we get when print statements are called
+class Checking:
+	def __init__(self, name):
+		self.name = name
+
+
+obj = Checking("Calsoft")
+print(obj.checking_the_object)
+obj.creating_the_object = "Calsoft.Inc"
+print(obj.creating_the_object)
+Hint:
+variables are searched and values are assigned which are not present in the class
+
+
+
+
+
+4)Write your own iterator which returns all the prime numbers between the input values in ascending order.
+Example:
+input1:20
+input2:0
+output:
+1
+3
+5
+7
+11
+13
+17
+19
+Note:
+You will have to take 2 inputs from the user
+
+
+
+
+5)Write a generator to return fibonacci series from 0 untill the number of times the input provided by the user
+Example:
+input:5
+output:
+0
+1
+1
+2
+3
+Explanation:
+Here the input value provided by the user is '5' which means the generator should return the fibonacci values 5 times and on
+6th atempt it should return a StopIteration Error
+
+
+
+
+
+6)Write a decorator which checks if the input value is an integer and is greater than 0 and should return an error message if the condition fails.
+The decorator is used above a function which adds two numbers.
+Example1:
+input: 2,3
+output:5
+Example2:
+input: a,3
+output:"Incorrect parameter passed.Please give an integer value"
+Example3:
+input: 0,3
+output:"Incorrect parameter passed.Please give an integer greater than zero"
+
+Explanation:
+After the user has provided the input, firstly the decorator verifies that the input value are integers and greater than zero,
+once verified then the values are passed onto the add function(over which the decorator is used) where the values are added.
+
+
+7)Identify the missing piece of code in below program and write the correct answer to remove the error which we get when print statements are called
+
+def decorator(func):
+    def wrapper():
+        print("I am the decorator")
+        return func()
+
+@decorator
+def function():
+    print("I am the function")
+function()
+
+Explanation:
+When we execute the above code, we get the error "TypeError: 'NoneType' object is not callable" but the expected output is
+I am the decorator
+I am the function.
+Hint:
+Decorators are expected to return "something".
+
+8)Write a code to change the functionality of a method of a class during runtime using monkey patching.
+Explanation:
+Before monkey patching if the method is called it adds the two numbers passed to the method.
+After monkey patching if the method is called it subtracts the two numbers passed to the method.
