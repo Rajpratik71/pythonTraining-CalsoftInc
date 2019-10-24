@@ -44,3 +44,53 @@ for i in samplelist:
 
 for i in range(0,10):
     print(i)
+
+
+# Dictionary
+
+sampledict = dict()
+
+sampledict2 = {}
+
+# Adding value to dictionary
+
+sampledict['xyz'] = 123
+
+print(sampledict)
+
+sampledict2['abc'] = 234
+
+print(sampledict2)
+
+# Printing Only key or values
+
+print(sampledict.keys())
+
+print(sampledict.values())
+
+# Iterate over dictionary by address
+
+for i in sampledict:
+    print(" %s %d" %(i,sampledict[i]))
+
+# Iterate over dictionary by iteration
+
+for index, key in enumerate(sampledict):
+    print(index, key, sampledict[key])
+
+# Checking If key exist
+
+print( 'abc' in sampledict)
+
+print( 'abc' in sampledict2)
+
+# Deleting the key value pair:
+
+del sampledict['abc']
+
+print(sampledict)
+
+del sampledict2['abc']
+
+print(sampledict)
+
