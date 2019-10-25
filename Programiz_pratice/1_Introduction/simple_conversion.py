@@ -1,0 +1,7 @@
+print(float(5))
+print(int(10.6))
+print(int(-10.6))
+print(set([1,2,3]))
+print(tuple({1,2,3}))
+print(list('hello'))
+print(dict([[1,2],[3,4]]))
