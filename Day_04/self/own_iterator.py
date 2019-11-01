@@ -32,3 +32,8 @@ print(next(iterobj))
 
 print(next(iterobj))
 print(next(iterobj))
+
+# or using loop
+
+for i in PowTwo(5):
+    print(i)
