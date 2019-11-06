@@ -8,7 +8,7 @@ class Employee:
 
     def __getattribute__(self, item):
         print("__getattribute__ called")
-        return item.split('_')
+        return item.split("_")
 
 
 obj = Employee()

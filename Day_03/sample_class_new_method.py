@@ -14,7 +14,7 @@ class Employee:
     #     instance = super().__new__(cls)
     #     return instance
 
-    def __new__(cls, first, last,  salary):
+    def __new__(cls, first, last, salary):
         if 0 < salary < 11000:
             return object.__new__(cls)
         else:

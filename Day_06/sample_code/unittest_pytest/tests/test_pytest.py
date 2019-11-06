@@ -34,7 +34,8 @@ def test_get_response_mock_side_effect():
         with mock.patch("sample_code.app.requests.Session.get") as mock_get:
             mock_response = mock.Mock()
             mock_response.raise_for_status.side_effect = requests.exceptions.HTTPError(
-                f"Got HTTP error code: 400")
+                f"Got HTTP error code: 400"
+            )
             mock_get.return_value = mock_response
             sample = Sample()
             sample.get_response(TEST_URL)

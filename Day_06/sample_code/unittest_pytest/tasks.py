@@ -9,11 +9,10 @@ FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @task
 def unit(ctx):
-    tests_dir = os.path.join(FILE_DIR, 'tests/unit')
-    coverage_test_all = os.path.join(FILE_DIR, '*')
+    tests_dir = os.path.join(FILE_DIR, "tests/unit")
+    coverage_test_all = os.path.join(FILE_DIR, "*")
 
-    cov = coverage.Coverage(include=coverage_test_all, branch=True,
-                            omit=['*/tests/*'])
+    cov = coverage.Coverage(include=coverage_test_all, branch=True, omit=["*/tests/*"])
     cov.start()
 
     tests = unittest.TestLoader().discover(tests_dir)

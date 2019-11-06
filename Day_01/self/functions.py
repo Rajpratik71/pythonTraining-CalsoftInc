@@ -1,5 +1,6 @@
 # Function to illustrate break in loop
 
+
 def breaktestfun(arr):
     for i in arr:
         if i == 5:
@@ -8,6 +9,7 @@ def breaktestfun(arr):
         print(i)
 
     print()
+
 
 def continuetestfun(arr):
     for i in arr:
@@ -22,7 +24,8 @@ def passtestfun(arr):
     print("Function demonstrating pass fuction")
     pass
 
-arr = [1,2,3,4,5,6,7,8]
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8]
 
 print("function demonstrating breaktestfun")
 breaktestfun(arr)
@@ -32,4 +35,3 @@ continuetestfun(arr)
 
 print("function demonstrating passtestfun")
 passtestfun(arr)
-

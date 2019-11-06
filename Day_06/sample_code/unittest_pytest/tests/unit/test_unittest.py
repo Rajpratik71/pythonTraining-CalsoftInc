@@ -13,7 +13,6 @@ class MockResponse:
 
 
 class UnitTestSample(TestCase):
-
     def setUp(self) -> None:
         self.sample = Sample()
         self.url = "http://www.google.com"
@@ -36,15 +35,20 @@ class UnitTestSample(TestCase):
                 mock_get.return_value = MockResponse(status_code)
                 sample = Sample()
                 sample.get_response(self.url)
-        self.assertIn(f"Received error for URL: {self.url}, error:", str(ex_info.exception))
+        self.assertIn(
+            f"Received error for URL: {self.url}, error:", str(ex_info.exception)
+        )
 
     def test_get_response_mock_side_effect(self):
         with self.assertRaises(RequestException) as ex_info:
             with mock.patch("sample_code.app.requests.Session.get") as mock_get:
                 mock_response = mock.Mock()
                 mock_response.raise_for_status.side_effect = requests.exceptions.HTTPError(
-                    f"Got HTTP error code: 400")
+                    f"Got HTTP error code: 400"
+                )
                 mock_get.return_value = mock_response
                 sample = Sample()
                 sample.get_response(self.url)
-        self.assertIn(f"Received error for URL: {self.url}, error:", str(ex_info.exception))
+        self.assertIn(
+            f"Received error for URL: {self.url}, error:", str(ex_info.exception)
+        )

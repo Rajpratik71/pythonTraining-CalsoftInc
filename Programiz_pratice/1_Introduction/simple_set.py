@@ -1,4 +1,4 @@
-a = {5,2,3,1,4}
+a = {5, 2, 3, 1, 4}
 
 # printing set variable
 print("a = ", a)

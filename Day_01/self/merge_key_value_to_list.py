@@ -1,6 +1,4 @@
-test_list = [{'gfg': 2, 'is': 4, 'best': 6},
-             {'it': 5, 'is': 7, 'best': 8},
-             {'CS': 10}]
+test_list = [{"gfg": 2, "is": 4, "best": 6}, {"it": 5, "is": 7, "best": 8}, {"CS": 10}]
 
 print("The original list is : " + str(test_list))
 

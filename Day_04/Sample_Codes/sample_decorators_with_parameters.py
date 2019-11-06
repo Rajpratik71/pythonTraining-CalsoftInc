@@ -5,6 +5,7 @@ def make_pretty(func):
         print("I got decorated")
         # calling the function which is decorated
         func(name, age)
+
     return inner
 
 
@@ -15,4 +16,4 @@ def ordinary(name, age):
     print("My age is {}".format(age))
 
 
-ordinary('Dawood', '25')
+ordinary("Dawood", "25")

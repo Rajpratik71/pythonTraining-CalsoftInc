@@ -21,4 +21,5 @@ def called_function():
 
     next(gen_obj)
 
+
 called_function()

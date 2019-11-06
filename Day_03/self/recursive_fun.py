@@ -2,7 +2,7 @@ def calc_factorial(x):
     if x == 1:
         return 1
     else:
-        return (x * calc_factorial(x - 1))
+        return x * calc_factorial(x - 1)
 
 
 num = input("Please input the Number : ")

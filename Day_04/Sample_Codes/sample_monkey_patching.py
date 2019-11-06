@@ -1,6 +1,6 @@
 class A:
-     def check_in_class(self):
-         print("I am in class A")
+    def check_in_class(self):
+        print("I am in class A")
 
 
 def check_in_func(self):

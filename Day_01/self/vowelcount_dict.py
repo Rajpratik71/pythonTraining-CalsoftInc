@@ -1,10 +1,10 @@
 # Program to count the number of each vowel in a string
 
 # string of vowels
-vowels = 'aeiou'
+vowels = "aeiou"
 
 # change this value for a different result
-ip_str = 'Hello, have you tried our turorial section yet?'
+ip_str = "Hello, have you tried our turorial section yet?"
 
 # uncomment to take input from the user
 # ip_str = input("Enter a string: ")

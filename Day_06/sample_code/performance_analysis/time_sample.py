@@ -8,7 +8,7 @@ def exec_time(func):
         start = time.time()
         result = func(*args, **kwargs)
         end = time.time()
-        print(func.__name__, 'took', end - start, 'time')
+        print(func.__name__, "took", end - start, "time")
         return result
 
     return wrapper
@@ -23,8 +23,8 @@ def get_number():
 def expensive_function():
     for x in get_number():
         i = x ^ x ^ x
-    return 'some result!'
+    return "some result!"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     result = expensive_function()

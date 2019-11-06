@@ -1,4 +1,4 @@
-t = (5,'program', 1+3j)
+t = (5, "program", 1 + 3j)
 
 # t[1] = 'program'
 print("t[1] = ", t[1])

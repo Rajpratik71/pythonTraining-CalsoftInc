@@ -32,7 +32,7 @@ def fib_seq(n):
     return seq
 
 
-if __name__ == '__main__':
-    print('MEMOIZED')
-    print('=' * 80)
-    profile.run('print(fib_seq(20))')
+if __name__ == "__main__":
+    print("MEMOIZED")
+    print("=" * 80)
+    profile.run("print(fib_seq(20))")

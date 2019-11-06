@@ -1,6 +1,6 @@
 # Declearing a list
 
-samplelist = [1, 'a', 'string' , 1+2]
+samplelist = [1, "a", "string", 1 + 2]
 
 samplelist.append(6)
 
@@ -13,7 +13,7 @@ print(samplelist[1])
 
 # Declaring a tuple
 
-sampletuple = (1 , 'a' , "abs" , 'abc')
+sampletuple = (1, "a", "abs", "abc")
 
 print(sampletuple[2])
 
@@ -22,7 +22,7 @@ print(sampletuple[2])
 # printing 1 to 10
 
 i = 0
-while (i < 10):
+while i < 10:
     i += 1
     print(i)
 
@@ -42,7 +42,7 @@ for i in samplelist:
 
 #  Iteration by loop for range
 
-for i in range(0,10):
+for i in range(0, 10):
     print(i)
 
 
@@ -54,11 +54,11 @@ sampledict2 = {}
 
 # Adding value to dictionary
 
-sampledict['xyz'] = 123
+sampledict["xyz"] = 123
 
 print(sampledict)
 
-sampledict2['abc'] = 234
+sampledict2["abc"] = 234
 
 print(sampledict2)
 
@@ -71,7 +71,7 @@ print(sampledict.values())
 # Iterate over dictionary by address
 
 for i in sampledict:
-    print(" %s %d" %(i,sampledict[i]))
+    print(" %s %d" % (i, sampledict[i]))
 
 # Iterate over dictionary by iteration
 
@@ -80,17 +80,16 @@ for index, key in enumerate(sampledict):
 
 # Checking If key exist
 
-print( 'abc' in sampledict)
+print("abc" in sampledict)
 
-print( 'abc' in sampledict2)
+print("abc" in sampledict2)
 
 # Deleting the key value pair:
 
-del sampledict['abc']
+del sampledict["abc"]
 
 print(sampledict)
 
-del sampledict2['abc']
+del sampledict2["abc"]
 
 print(sampledict)
-

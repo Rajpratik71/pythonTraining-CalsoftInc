@@ -16,5 +16,5 @@ obj = Employee()
 print(obj.does_not_exist)
 
 # Setting a value to an attribute which is not present so it will call __setattr__
-obj.person = 'Dawood'
+obj.person = "Dawood"
 print(obj.person)

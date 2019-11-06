@@ -7,26 +7,26 @@ class Alphabet:
 
     # getting the values
     def getValue(self):
-        print('Getting value')
+        print("Getting value")
         return self._value
 
     # setting the values
     def setValue(self, value):
-        print('Setting value to ' + value)
+        print("Setting value to " + value)
         self._value = value
 
     # deleting the values
     def delValue(self):
-        print('Deleting value')
+        print("Deleting value")
         del self._value
 
-    value = property(getValue, setValue, delValue, )
+    value = property(getValue, setValue, delValue,)
 
 
 # passing the value
-x = Alphabet('In the training')
+x = Alphabet("In the training")
 print(x.value)
 
-x.value = 'GfG'
+x.value = "GfG"
 
 del x.value

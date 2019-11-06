@@ -4,7 +4,9 @@ from logging import config
 LOGGING_CONFIG = {
     "version": 1,
     "disable_existing_loggers": True,
-    "formatters": {"standard": {"format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s"}},
+    "formatters": {
+        "standard": {"format": "%(asctime)s [%(levelname)s] %(name)s: %(message)s"}
+    },
     "handlers": {
         "default": {
             "level": "INFO",
@@ -14,20 +16,22 @@ LOGGING_CONFIG = {
         }
     },
     "loggers": {
-        "": {"handlers": ["default"], "level": "INFO", "propagate": False},  # root logger
-        "my.packg": {"handlers": ["default"], "level": "WARNING", "propagate": False},
-        "__main__": {
+        "": {
             "handlers": ["default"],
-            "level": "DEBUG",
+            "level": "INFO",
             "propagate": False,
-        },
+        },  # root logger
+        "my.packg": {"handlers": ["default"], "level": "WARNING", "propagate": False},
+        "__main__": {"handlers": ["default"], "level": "DEBUG", "propagate": False,},
     },
 }
 
 config.dictConfig(LOGGING_CONFIG)  # just once
 
 main_log = logging.getLogger(__name__)  # once in each module
-main_log.debug("Configured Logging.")  # message level checks at loggers first and then in handlers
+main_log.debug(
+    "Configured Logging."
+)  # message level checks at loggers first and then in handlers
 main_log.error("Any Error Message.")
 
 root_log = logging.getLogger()

@@ -1,5 +1,5 @@
 print("===========================Zip example================================")
-l1 = ['a', 'b', 'c']
+l1 = ["a", "b", "c"]
 l2 = [1, 2]
 z = zip(l1, l2)
 print(z)
@@ -10,7 +10,7 @@ m = map(lambda x: x ** 2, items)
 print(m)
 print(list(m))
 print("===========================enumerate example================================")
-seasons = ['Spring', 'Summer', 'Fall', 'Winter']
+seasons = ["Spring", "Summer", "Fall", "Winter"]
 print(enumerate(seasons))
 print(list(enumerate(seasons)))
 print(list(enumerate(seasons, start=1)))

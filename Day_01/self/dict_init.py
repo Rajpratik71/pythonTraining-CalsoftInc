@@ -2,7 +2,7 @@
 
 test_dict = {}
 
-test_keys = {'abc', 'def' , 'ghi'}
+test_keys = {"abc", "def", "ghi"}
 
 for keys in test_keys:
     test_dict[keys] = 4

@@ -7,17 +7,18 @@ class String:
 
     # print our string object
     def __repr__(self):
-        return 'Object: {}'.format(self.string)
+        return "Object: {}".format(self.string)
 
     # Magic method which is always called when we do addition
     def __add__(self, other):
         print("Adding '{}' to'{}'".format(self.string, other))
         return self.string + other
 
+
 # Driver Code
-if __name__ == '__main__':
+if __name__ == "__main__":
     # object creation
-    string1 = String('Hello')
+    string1 = String("Hello")
 
     # concatenate String object and a string
-    print(string1 + ' Geeks')
+    print(string1 + " Geeks")

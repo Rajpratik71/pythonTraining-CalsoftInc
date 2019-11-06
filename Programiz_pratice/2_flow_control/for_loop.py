@@ -8,7 +8,7 @@ sum = 0
 
 # iterate over the list
 for val in numbers:
-	sum = sum+val
+    sum = sum + val
 
 # Output: The sum is 48
 print("The sum is", sum)
