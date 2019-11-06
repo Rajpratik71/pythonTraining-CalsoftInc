@@ -1,0 +1,28 @@
+1. Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+
+2. Write a user defined exception class "NegativePriceException" and use it to raise as exception when a price of an item entered by user is negative.
+
+
+3. Complete the below program to run successfully:
+	a. Write user defined exception class for User_defined_exception1, User_defined_exception2
+	b. Handle the user defined exception writing #appropriate message to user
+
+# we need to guess this alphabet till we get it right
+alphabet = 'k'
+
+while True:
+	try:
+		foo = raw_input ( "Enter an alphabet: " )
+
+		if foo < alphabet:
+			raise User_defined_exception1
+		elif foo > alphabet:
+			raise User_defined_exception2
+	except 1:
+		#appropriate message to user	
+	except 2:
+		#appropriate message to user 
+
+	print("Congratulations! You guessed it correctly.")
+

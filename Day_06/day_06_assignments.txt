@@ -1,0 +1,23 @@
+Create a class for Students with some attributes and CRUD methods. (No need to use Database, you can use Dict for storing data.)
+- Allow use to provide option number:
+	1. Add new student (roll no should be auto assigned)
+	2. List all students
+	3. Get student by roll no
+	4. Update student by roll no
+	5. Delete student by roll no
+
+1. Run Pylint, flake8 and black on your code and also resolve all errors.
+Note: Take screenshots before and after resolving errors.
+
+2. Write unit tests for this using Unittest and Pytest framework.
+- Add custom exceptions for verifying inputes.
+- Use mocking for requires scenarios.
+- Code coverage should be 100%
+
+3. Try running performance analysis tools on your code:
+- Traceing, time.time(), timeit, profiling.
+Note: Attach screenshots of it.
+
+4. Use Comprehension in your code.
+
+5. Implement Context manager for to create default dict(instead of init) and clear all data. 

@@ -1,0 +1,20 @@
+1. Write a python program and add some log statemnts with different levels and check for default log level and also change the default log level to some other level and check again.
+
+
+2. Write a python program that will change the logger format on the fly.
+
+
+3. Write a program to check students percentage, accept percentage from user,
+if percentage is >=80 log the debug message,
+if percentage >=65 & <80 log info message,
+if percentage >=50 & <65 log warning message,
+if percentage >=35 & <50 log critical message,
+and if percenage <35 log error message.
+
+create two handlers(StreamHandler, FileHandler) and then send all log messages to StreanHandler and all error and critical messages to FileHandler and both handlers have different logging formats.
+
+and program will terminate only if percentage is <=0 or >100.
+
+
+4. Write a logging conf file with multiple loggers, handlers and formatters.
+write a python program that accept logging config file and write some logs then check is it working as expected according to log conf file.
