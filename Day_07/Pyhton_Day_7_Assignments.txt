@@ -1,0 +1,60 @@
+===============ASSIGNMENT 1============================
+1. Given a list of items, each item represents a tuple of (url, repeat_counter, wait_for_time)
+    where 1. url - http URL point to access
+          2. repeat_counter - Number of times urls contents needs to be downloded
+          3, wait_for_time - Wait for number of seconds before moving to next attempt
+
+Create 4 threads, each thread will serve one item in the input list for number of times as specified by the repeat_counter.
+
+inputs = [
+    ("https://files.pythonhosted.org/packages/ab/6f/b5dd831c5655d06504c0740f415a52246c7223163208141c617dae7a1b3b/intel_scipy-1.1.0-cp36-cp36m-manylinux1_x86_64.whl", 2, 1),
+    ("http://google.com/favicon.ico", 10, 0.5),
+    ("https://youtu.be/PJ4t2U15ACo", 3, 2),
+    ("https://www.w3schools.com/python/python_intro.asp", 20, 1)]
+
+Outputs -
+- Save each url contents in the path - <path_to_current_folder>/multithreading/ with the
+    file name as "<thread_name/id>_attempt_number.<original_file_extension>" (If file don't have extension, ignore extension)
+- Print total execution time of program
+
+#Hint: Use python requests library to get contents from http url
+
+
+===============ASSIGNMENT 2 ============================
+
+2. Given a list of urls
+Create 4 processes, each process will serve one item in the input list, once done should pick up next available unserved url in the list.
+
+inputs = [
+    "https://files.pythonhosted.org/packages/ab/6f/b5dd831c5655d06504c0740f415a52246c7223163208141c617dae7a1b3b/intel_scipy-1.1.0-cp36-cp36m-manylinux1_x86_64.whl",
+    "http://google.com/favicon.ico",
+    "https://youtu.be/PJ4t2U15ACo",
+    "https://www.w3schools.com/python/python_intro.asp",
+    "https://www.google.com",
+    "https://yahoo.com",
+    "https://www.linkedin.com",
+    "https://www.tutorialspoint.com/index.htm",
+    "https://docs.python.org/3/",
+    "https://www.bing.com"]
+
+Outputs -
+- Save each url contents in the path - <path_to_current_folder>/multiprocessing/ with the
+    file name as "<process_name/id>_<url_name>"
+
+- Print total execution time of program
+
+#Hint 1: Use python requests library to get contents from http url
+
+#Hint 1: Use multiprocessing multiprocess.Pool class
+
+===============ASSIGNMENT 3 ============================
+
+Implement assignment 1 using asyncio (async-await syntax)
+
+Outputs -
+- Save each url contents in the path - <path_to_current_folder>/asyncio/ with the
+    file name as "<thread_name/id>_attempt_number.<original_file_extension>" (If file don't have extension, ignore extension)
+- Print total execution time of program
+
+#Hint: Use python requests library to get contents from http url
+
