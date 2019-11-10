@@ -24,8 +24,11 @@ if __name__ == "__main__":
 
     START = time.time()
     THREAD1.start()
+    print(THREAD1.isAlive())
     THREAD2.start()
     THREAD1.join()
+    print(THREAD1.isAlive())
+    print(THREAD2.isAlive())
     THREAD2.join()
     END = time.time()
 

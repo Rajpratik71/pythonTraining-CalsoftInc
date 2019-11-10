@@ -15,11 +15,19 @@ def make_dir():
     """
     dir_path = "test123"
     print("1" * 20)
-    # with NEW_LOCK:
-    if not os.path.exists(dir_path):
-        print("2" * 20)
-        time.sleep(1)
-        os.makedirs(dir_path)
+    with NEW_LOCK:
+        if not os.path.exists(dir_path):
+            print("2" * 20)
+            time.sleep(1)
+            os.makedirs(dir_path)
+
+
+#  NEW_LOCK.acquire()
+# if not os.path.exists(dir_path):
+#      print("2" * 20)
+#      time.sleep(1)
+#      os.makedirs(dir_path)
+#  NEW_LOCK.release()
 
 
 if __name__ == "__main__":
