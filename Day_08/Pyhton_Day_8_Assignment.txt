@@ -1,0 +1,33 @@
+Create a web application(REST API's) to create TO-DO list using flask or aiohttp python web development frameworks with following requirements
+    1. Login REST API to obtain token which is active for 60 mins(Each subsequent request must provide this token in request)
+    2. Should be able to create/Update/delete/list one or more TO-DO lists with following attributes
+        - List Name
+        - Description
+        - List Owner
+        - Visibility (Public/Private)
+        - Creation date
+        - Update date
+    3. Listing API must return only user owned + public lists with additional filters support to filter lists based on Owner name, Creation Date(created between given from and to dates)
+    4. Should be able to add/delete items to the do a list with following attributes
+        - Item Name
+        - Item Description
+        - List Name
+        - Due date
+        - Update date
+        - Status (Incomplete - Default/Completed)
+    5. Should be able to list items in the given list with sorting support on Name, Due date(Default) and Update date
+    6. If list is Private and and non-owner requests list items, request should get rejected
+
+- Design the DB schema and models for above requirements and create rest end points
+- SQLAlchemy or Peewee ORM can be used
+- Use SQLite or MySQL as database or your preferred choice of database
+- Wherever required rest endpoints should accept json inputs in post payload(content-type application/json)
+- All rest endpoints must returned json output
+- Try to use serializers for data serialization
+
+NOTE: If
+
+
+
+
+
