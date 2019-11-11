@@ -3,6 +3,7 @@ Module to demonstrate pickle library usage in python.
 """
 
 import pickle
+import pickletools
 
 
 GRADES = {"Alice": 89, "Bob": 72, "Charles": 87}
@@ -11,6 +12,7 @@ GRADES = {"Alice": 89, "Bob": 72, "Charles": 87}
 SERIAL_GRADES = pickle.dumps(GRADES)
 
 print(SERIAL_GRADES)
+pickletools.dis(SERIAL_GRADES)
 
 # Use loads to de-serialize an object
 RECEIVED_GRADES = pickle.loads(SERIAL_GRADES)

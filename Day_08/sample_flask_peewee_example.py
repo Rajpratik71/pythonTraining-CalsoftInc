@@ -2,9 +2,10 @@
 Module to demonstrate peewee usage in a flask application.
 """
 import json
+import uuid
 
 from flask import Flask
-from peewee import MySQLDatabase, Model, TextField, IntegerField, CharField
+from peewee import MySQLDatabase, Model, TextField, IntegerField, CharField, AutoField
 
 mysql_db = MySQLDatabase("Students", user="root", password="root")
 
@@ -16,11 +17,11 @@ class BaseModel(Model):
         database = mysql_db
 
 
-class Students(BaseModel):
+class Students_pewee(BaseModel):
     """
-        Student model
+    Student model
     """
-
+    student_id = AutoField()
     first_name = TextField()
     last_name = TextField()
     age = IntegerField()
@@ -35,7 +36,7 @@ def list_students():
     Returns:
         List: students information
     """
-    students = Students.select()
+    students = Students_pewee.select()
     student_list = []
     for student in students:
         student_list.append(
@@ -57,7 +58,7 @@ def add_student():
         Dict: operation result status
     """
     with mysql_db.atomic():
-        Students.create(first_name="New", last_name="Student", age=15, gender="F")
+        Students_pewee.create(first_name="New", last_name="Student", age=15, gender="F")
     return json.dumps({"result": "success"})
 
 
@@ -66,8 +67,8 @@ def create_tables():
     Create tables if not exists
     """
     with mysql_db:
-        mysql_db.create_tables([Students])
-
+        mysql_db.create_tables([Students_pewee])
+        Students_pewee.truncate_table()
 
 if __name__ == "__main__":
     create_tables()

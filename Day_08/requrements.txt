@@ -1,0 +1,7 @@
+aiohttp==3.6.2
+Flask==1.1.1
+Flask-SQLAlchemy==2.4.1
+mysql==0.0.2
+mysql-connector-python==8.0.18
+mysqlclient==1.4.5
+peewee==3.11.2

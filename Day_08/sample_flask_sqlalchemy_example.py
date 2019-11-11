@@ -2,9 +2,11 @@
 Module to demonstrate SQLAlchemy usage in a flask application.
 """
 import json
+import uuid
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.dialects.postgresql import UUID
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -14,7 +16,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/Students"
 db = SQLAlchemy(app)
 
 
-class Students(db.Model):
+class Students_alchemy(db.Model):
     """
         Student model
     """
@@ -39,11 +41,12 @@ def list_students():
     Returns:
         List: students information
     """
-    students = Students.query.all()
+    students = Students_alchemy.query.all()
     student_list = []
     for student in students:
         student_list.append(
             {
+                "id": student.id,
                 "first_name": student.first_name,
                 "last_name": student.last_name,
                 "age": student.age,
@@ -60,7 +63,7 @@ def add_student():
     Returns:
         Dict: operation result status
     """
-    student = Students("New", "Student", 15, "F")
+    student = Students_alchemy("New", "Student", 15, "F")
     db.session.add(student)
     db.session.commit()
     return json.dumps({"result": "success"})
