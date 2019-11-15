@@ -1,0 +1,7 @@
+Assignments
+
+#1. pyvmomi - Print virtual machine names for a given ESXi host 
+2. requests + beautifulSoup + regex - Get any URL of choice, parse it, 
+                                      1. print out the title 
+									  2. print out the count of paragraphs in the webpage
+									  3. check if the text contains any email address
