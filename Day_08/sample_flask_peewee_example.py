@@ -2,7 +2,6 @@
 Module to demonstrate peewee usage in a flask application.
 """
 import json
-import uuid
 
 from flask import Flask
 from peewee import MySQLDatabase, Model, TextField, IntegerField, CharField, AutoField
@@ -21,6 +20,7 @@ class Students_pewee(BaseModel):
     """
     Student model
     """
+
     student_id = AutoField()
     first_name = TextField()
     last_name = TextField()
@@ -69,6 +69,7 @@ def create_tables():
     with mysql_db:
         mysql_db.create_tables([Students_pewee])
         Students_pewee.truncate_table()
+
 
 if __name__ == "__main__":
     create_tables()

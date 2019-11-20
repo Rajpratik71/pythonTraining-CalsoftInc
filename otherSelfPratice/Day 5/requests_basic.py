@@ -1,9 +1,6 @@
 import request
 
-payload = {
-    "email": "eve.holt@reqres.in",
-    "password": "cityslicka"
-}
+payload = {"email": "eve.holt@reqres.in", "password": "cityslicka"}
 
 r = request.post("https://reqres.in/api/login/", data=payload)
 

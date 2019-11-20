@@ -1,6 +1,8 @@
 import ssl
+
 from pyVim import connect
 from pyVmomi import vim
+
 
 def connectVcenter(vCenterHost, username, password, portNum=443):
     """
@@ -12,9 +14,11 @@ def connectVcenter(vCenterHost, username, password, portNum=443):
     Returns     : Service instance object
     """
     context = ssl._create_unverified_context()
-    si = connect.SmartConnect(host=vCenterHost, user=username,
-                              pwd=password, port=portNum, sslContext=context)
+    si = connect.SmartConnect(
+        host=vCenterHost, user=username, pwd=password, port=portNum, sslContext=context
+    )
     return si
+
 
 def getObj(content, vimtype, name):
     """
@@ -25,10 +29,13 @@ def getObj(content, vimtype, name):
                  name    - Managed object entity name (STRING)
     Return:      Matched Managed object (OBJECT)
     """
-    container = content.viewManager.CreateContainerView(content.rootFolder, vimtype, True)
+    container = content.viewManager.CreateContainerView(
+        content.rootFolder, vimtype, True
+    )
     for vmObj in container.view:
         if vmObj.name == name:
             return vmObj
+
 
 def getDatacenterByName(si, name):
     """
@@ -39,6 +46,7 @@ def getDatacenterByName(si, name):
     """
     return getObj(si.RetrieveContent(), [vim.Datacenter], name)
 
+
 def getClusterByName(si, name):
     """
     Description: Find a cluster by it's name and return it
@@ -47,6 +55,7 @@ def getClusterByName(si, name):
     Return: cluster Object (OBJECT)
     """
     return getObj(si.RetrieveContent(), [vim.ClusterComputeResource], name)
+
 
 def getHostByName(si, name):
     """
@@ -57,6 +66,7 @@ def getHostByName(si, name):
     """
     return getObj(si.RetrieveContent(), [vim.HostSystem], name)
 
+
 def getVirtualMachineByName(si, name):
     """
     Description: Find a vm by it's name and return it
@@ -66,6 +76,7 @@ def getVirtualMachineByName(si, name):
     """
     return getObj(si.RetrieveContent(), [vim.VirtualMachine], name)
 
+
 def getDatastoreByName(si, name):
     """
     Description: Find a datastore by it's name and return it
@@ -74,6 +85,7 @@ def getDatastoreByName(si, name):
     Return:  datastore Object (OBJECT)
     """
     return getObj(si.RetrieveContent(), [vim.Datastore], name)
+
 
 def getNetworkByName(si, name, isVDS=False):
     """
@@ -85,14 +97,17 @@ def getNetworkByName(si, name, isVDS=False):
     if isVDS is False:
         networkObj = getObj(si.RetrieveContent(), [vim.Network], name)
     else:
-        networkObj = getObj(si.RetrieveContent(), [vim.dvs.DistributedVirtualPortgroup], name)
+        networkObj = getObj(
+            si.RetrieveContent(), [vim.dvs.DistributedVirtualPortgroup], name
+        )
     return networkObj
+
 
 # connect vcenter
 siObj = connectVcenter(vcenterIp, vcenterUsername, vcenterPassword)
 # print(siObj.content.about)
 # get datacenter by name
-datacenterName = 'UCP CI Datacenter'
+datacenterName = "UCP CI Datacenter"
 datacenterObj = getDatacenterByName(siObj, datacenterName)
 print("datacenterName is", datacenterObj.name, datacenterObj.datastore[0].name)
 
@@ -131,6 +146,3 @@ print("datacenterName is", datacenterObj.name, datacenterObj.datastore[0].name)
 
 # poweron the above virtual machine
 # vmObj.PowerOn()
-
-
-

@@ -2,11 +2,9 @@
 Module to demonstrate SQLAlchemy usage in a flask application.
 """
 import json
-import uuid
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.dialects.postgresql import UUID
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
@@ -20,6 +18,7 @@ class Students_alchemy(db.Model):
     """
         Student model
     """
+
     id = db.Column("student_id", db.Integer, primary_key=True)
     first_name = db.Column(db.String(100))
     last_name = db.Column(db.String(100))

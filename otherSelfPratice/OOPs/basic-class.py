@@ -1,19 +1,19 @@
 class Parent:
     def __init__(self):
-        print('initializing parent')
+        print("initializing parent")
 
     def parent_method(self):
-        print('inside parent method')
+        print("inside parent method")
 
 
 class Child(Parent):
     def __init__(self):
-        print('initializing child')
+        print("initializing child")
         super().__init__()
         # super()
 
     def child_method(self):
-        print('inside child method')
+        print("inside child method")
 
 
 childObj = Child()

@@ -5,4 +5,4 @@ import math
 # print(baiscmath.mul(1,2))
 # print(baiscmath.div(1,2))
 
-print(math.div(1, ''))
+print(math.div(1, ""))

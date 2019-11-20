@@ -26,10 +26,10 @@ class Tutor(Person, LearnMixin, TeacherMixIn):
         super(Tutor, self).__init__(*args, **kargs)
 
 
-kshipra = Tutor('Kshipra', 'namjoshi', '25')
+kshipra = Tutor("Kshipra", "namjoshi", "25")
 
-kshipra.enrol('Python')
+kshipra.enrol("Python")
 
-kshipra.assign_teaching('ansible')
+kshipra.assign_teaching("ansible")
 
 print(kshipra.assign_teaching)

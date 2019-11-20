@@ -9,7 +9,7 @@ def f(l, i):
         l.release()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     lock = Lock()
 
     for num in range(10):

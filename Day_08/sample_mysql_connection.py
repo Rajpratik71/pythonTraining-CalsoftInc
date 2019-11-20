@@ -46,23 +46,15 @@ def connect():
             print("Connected to MySQL database")
 
         cursor = conn.cursor(prepared=True)
-        create_table = (
-            "Create table if not exists students(first_name VARCHAR(30), last_name VARCHAR(30), age int(3), gender CHAR)"
-        )
-        truncate_table = (
-            "truncate table students"
-        )
+        create_table = "Create table if not exists students(first_name VARCHAR(30), last_name VARCHAR(30), age int(3), gender CHAR)"
+        truncate_table = "truncate table students"
         cursor.execute(create_table)
         cursor.execute(truncate_table)
 
-        insert_single = (
-            "INSERT INTO students(first_name, last_name, age, gender)  VALUES(%s,%s, %s, %s)"
-        )
+        insert_single = "INSERT INTO students(first_name, last_name, age, gender)  VALUES(%s,%s, %s, %s)"
         student = ("John", "White", 16, "M")
 
-        insert_many = (
-            "INSERT INTO students(first_name, last_name, age, gender) VALUES(%s,%s, %s, %s)"
-        )
+        insert_many = "INSERT INTO students(first_name, last_name, age, gender) VALUES(%s,%s, %s, %s)"
         students = [("Alex", "Brown", 15, "M"), ("Mery", "d'souza", 16, "F")]
 
         cursor.execute(insert_single, student)

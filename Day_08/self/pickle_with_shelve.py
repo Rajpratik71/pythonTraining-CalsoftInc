@@ -22,9 +22,9 @@ print(SERIAL_GRADES)
 RECEIVED_GRADES = pickle.loads(SERIAL_GRADES)
 assert GRADES == RECEIVED_GRADES
 
-file = open('pickle_file', 'wb')
+file = open("pickle_file", "wb")
 pickle.dump(GRADES, file)
 
-file = open('pickle_file', 'r')
+file = open("pickle_file", "r")
 value = pickle.load(file)
 print(value)
