@@ -1,0 +1,10 @@
+################ QUESTSION 2 ###############
+class complex:
+    def __init__(self,x):
+        self.x=x
+    def __add__(self,other):  
+      return self.x+other.x 
+obj1=complex(1+2j)
+obj2=complex(2+1j)  
+print(obj1+obj2)
+############## END ########################33

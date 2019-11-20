@@ -1,0 +1,9 @@
+########################### QUESTION NO 8#######
+class BMP:
+    def beforemonkeypachingaddining(self,x,y):
+        return x+y
+def aftermonkeypachingsubstract(self,x,y):
+    return x-y
+BMP.beforemonkeypachingaddining=aftermonkeypachingsubstract   
+print(obj.monkeypachingadd(2,4))    
+################ END ########################

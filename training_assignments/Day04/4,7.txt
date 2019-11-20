@@ -1,0 +1,12 @@
+####################    QUESTION NO 7###################
+def decorator(func):
+    def wrapper():
+        print("I am the decorator")
+        func()
+    return wrapper
+
+def function():
+    print("I am the function")
+obj=decorator(function)
+obj()
+##############################  END ######################

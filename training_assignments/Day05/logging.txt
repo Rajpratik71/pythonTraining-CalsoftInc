@@ -1,0 +1,61 @@
+*****************************************************
+1. Write a function to compute 5/0 and use try/except to catch the exceptions.
+def div(a,b):
+    return a/b
+try:
+    c=div(5,0)
+except:
+   print("b can't be 0")    
+    
+*********************************************************
+*****************************************************
+2. Write a user defined exception class "NegativePriceException" and use it to raise as exception when a price of an item entered by user is negative.
+
+
+class NegativePriceException(Exeption):
+    def __init__(self,msg):
+        self.msg=msg
+    def check_native(price):
+        if price < 0:
+            raise NegativePriceException("Price can not be negative")
+if __name__=='__main__:
+      price = int(input("Enter integer number"))
+      try:
+             check_native(price):          
+      excepton NegativePriceException as price:
+          print(price)
+************************************************
+*****************************************************
+3. Complete the below program to run successfully:
+	a. Write user defined exception class for User_defined_exception1, User_defined_exception2
+	b. Handle the user defined exception writing #appropriate message to user
+
+# we need to guess this alphabet till we get it right
+alphabet = 'M'
+class firstAlphabetException(self,msg):
+    self.msg=msg
+class secondAlphabetException(self,msg):
+    self.msg=msg
+
+while True:
+	try:
+             foo = int(input ( "Enter an alphabet: " ))
+        
+             if foo < alphabet:
+            
+                     raise firstAlphabetException(foo,alphabet)
+            
+             elif foo > alphabet:
+            
+			          raise secondAlphabetException(foo,alphabet)
+            
+	except firstAlphabetException as firstAE:
+        
+            print(firstAE)
+            
+	except secondAlphabetException as secondAE:
+        
+            print(secondAE)
+            
+print("Congratulations! You guessed it correctly.")
+************************************************************

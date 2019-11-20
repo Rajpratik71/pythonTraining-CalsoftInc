@@ -1,0 +1,10 @@
+#####################  QUESTION NO 3 ##################
+class Checking:
+    def __init__(self, name):
+        self.name = name
+    def creating_the_object(self):
+        print(self.name)
+obj = Checking("Calsoft")
+obj.creating_the_object = "Calsoft.Inc"
+print(obj.creating_the_object)
+############################# END ######################

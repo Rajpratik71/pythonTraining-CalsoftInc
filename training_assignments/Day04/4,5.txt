@@ -1,0 +1,14 @@
+############ QUESTION NO  5 #####################
+import itertools as f
+user = int(input('enter the numbers:'))
+def fibonacci():
+    a,b = 0,1
+    while 1:
+        yield a
+        b = a+b
+        yield b
+        a = a+b
+
+for x in f.islice(fibonacci(), user):
+    print(x)
+################ END ###########################

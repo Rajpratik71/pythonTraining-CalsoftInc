@@ -1,0 +1,10 @@
+What is a raw query
+
+What is raw SQL
+
+Does Django use SQL
+
+What is raw expression in laravel
+
+First new Added line
+Second new Added line

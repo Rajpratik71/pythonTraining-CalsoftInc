@@ -1,0 +1,20 @@
+[loggers]
+keys=root
+
+[logger_root]
+handlers=screen
+
+[formatters]
+keys=simple
+
+[formatter_simple]
+format=%(name)s - %(levelname)s - %(message)s
+
+[handlers]
+keys=screen
+
+[handler_screen]
+class=StreamHandler
+formatter=simple
+level=ERROR
+args=(sys.stdout,)

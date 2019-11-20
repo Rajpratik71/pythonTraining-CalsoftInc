@@ -1,0 +1,40 @@
+QUESTION NO 1
+num=int(input("enter the user:"))
+ 
+length = len(str(num))
+sum = 0
+temp = num
+ 
+while(temp != 0):
+	sum = sum + ((temp % 10) ** length)
+	temp = temp // 10
+ 
+if sum == num:
+	print("armstrong number")
+else:
+	print("not armstrong number")
+
+QUESTION NO 2
+
+p_count,n_count=0,0
+list=[2,3,4,5,6,7,7,-3,-4,-5,-6,-3,-2,-1,-5]
+for i in list:
+  if i>=0:
+      p_count+=1
+     
+  else:
+      n_count+=1
+
+L=[2,3,4,5,6,-2,-3,-4]
+sum=0
+for i in L:
+    sum=sum+i
+    for i in L:
+       if i==sum:
+         print(i)
+         break
+
+     
+print("postive numbers in the list:",p_count)
+print("naegative numbers in the list:",n_count)      
+      

@@ -1,0 +1,71 @@
+1. Check below program, to find a given number is armstrong or not(but not giving correct result).
+The task is to debug the existing code to execute it successfully.
+
+****************** PROGRAM START ******************
+num = int(input("enter a number: "))
+ 
+length = len(str(num))
+sum = 0
+temp = num
+ 
+while(temp != 0):
+	sum = sum + ((temp % 10) ** length)
+	temp = temp // 10
+ 
+if sum == num:
+	print("armstrong number")
+else:
+	print("not armstrong number")
+
+****************** PROGRAM END ******************
+
+
+*********************************************************************
+2. Write a program to count positive and negative numbers in a list.
+Task is to add break point in code to check we are getting correct count for every ieration, also check all debugging commands given in PPT.
+import pdb
+def count_pos_neg(list_num):
+    pos_count=0
+    neg_count=0
+    for element in list_num:
+        if (element>0):
+            pdb.set_trace()
+            pos_count+=1
+        elif(element<0):
+            pdb.set_trace()
+            neg_count+=1
+    return pos_count,neg_count
+print(count_pos_neg([1,2,-3,-4,-6))
+*********************************************************
+*************************************************************        
+3. Write a program that will accept input from user,
+X = row, Y = col, serach_value = V
+create a X*Y matrix and store numbers in it in order i.e. X+(Y*Y) 
+then search the number V in matrix and add break-point in code if cell value is equal to V and finally program will return the number of occurences of V in matrix.
+
+
+import pdb
+def cre_matrix(rows,columns):
+    matrix=[]
+    for row in range(rows):
+        matrix_row=[]
+        for column in range(columns):
+            matrix_row.append(row + (column*column))
+        matrix.append(matrix_row)
+        return matrix
+if __name__=='__main__':
+    rows, columns = input("Enter number of rows and columns space separated").split()
+    rows = int(rows)
+    columns = int(columns)
+    element = int(input("Enter element to search in matrix"))
+    element_occurrence = 0
+    matrix=create_matrix(rows,columns)
+    for row in range (rows):
+        for column in range(columns):
+            print(matrix[row][column], end=" ")
+            if(matrix[row][column]==element):
+                pdb.set_trace()
+                element_occurrence+=1
+                print()
+print("Element {} occurred {} times in matrix".format(element,element_occurrence)) 
+*****************************************************************  

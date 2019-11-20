@@ -1,0 +1,12 @@
+################## QUESTION NO 1 ##############    
+
+class magic:
+   def __init__(self,x):
+     self.x=x
+    
+   def __sub__(self,other):
+      return self.x - other.x
+obj1=magic(10)
+obj2=magic(5)   
+print(obj1-obj2)
+#############  END ######################
